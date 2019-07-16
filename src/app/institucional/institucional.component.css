@@ -1,5 +1,9 @@
 .home {
+<<<<<<< HEAD
 
+=======
+    background-image: url("/assets/computer.png");
+>>>>>>> 14e385a6422909c58a489e5ef9a91fa46de5e362
     width: 100%;
     height: 100%;
     line-height:20rem;
