@@ -1,0 +1,148 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="assets/icon.png" /> -->
+<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> -->
+<!-- <div class="menu-container" id="navbarSupportedContent">
+        <ul class="menu-container__menu">
+            <li class="menu-container__menu__item">
+                <a class="menu-container__menu__item__link" (click)="scrollTo(home)">Home</a>
+            </li>
+            <li class="menu-container__menu__item">
+                <a class="menu-container__menu__item__link" (click)="scrollTo(servicos)">Serviços</a>
+            </li>
+            <li class="menu-container__menu__item">
+                <a class="menu-container__menu__item__link" (click)="scrollTo(portifolio)">Portifólio</a>
+            </li>
+            <li class="menu-container__menu__item">
+                <a class="menu-container__menu__item__link" href="#">Blog</a>
+            </li>
+            <li class="menu-container__menu__item">
+                <a class="menu-container__menu__item__link" (click)="scrollTo(contato)">Contato</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="#">
+        <img src="assets/icon.png" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div #menu class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" (click)="scrollTo(home)">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" (click)="scrollTo(servicos)">Serviços</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" (click)="scrollTo(portifolio)">Portifólio</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" (click)="scrollTo(contato)">Contato</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div #home class="home">
+    <h1>VelaSoft
+        <p>Desenvolvimento sob medida</p>
+    </h1>
+</div>
+
+<div #servicos class="servicos">
+    <h1 style="color: black; line-height:6rem">O que nós desenvolvemos?</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="assets/icon_site.png" />
+                <div class="card">
+                    <div class="container_servicos">
+                        <h5><b>Sites</b></h5>
+                        <p>Desenvolvimento de sites personalizados para o seu negocio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img src="assets/icon_celular.png" />
+                <div class="card">
+                    <div class="container_servicos">
+                        <h5><b>Aplicativos</b></h5>
+                        <p>Desenvolvimento de aplicativos híbridos para plataforma Android e IOS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img src="assets/icon_computer.png" />
+                <div class="card">
+                    <div class="container_servicos">
+                        <h5><b>Aplicações Web</b></h5>
+                        <p>Desenvolvimento de soluções Web de acordo com sua necessidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div #portifolio class="portifolio">
+    <br>
+    <h1 style="color: #fff;">Portifolio</h1>
+</div>
+
+<div #contato class="contato">
+    <br>
+    <h1>Contato</h1>
+    <div class="container">
+        <div class="row">
+        
+            <div class="col" style="text-align: left; margin-top: 15px">
+                <p>
+                    <img src="assets/icon_telefone.png" />
+                    (19) 981816213 /
+                </p>
+                <p>
+                    <img src="assets/icon_email.png" />
+                    contatovelasoft@gmail.com
+                </p>
+            </div>
+            <div class="col">
+                <form (ngSubmit)="contactForm(form.value); form.reset()" #form="ngForm" class="example-form">
+                    <div class="form-group example-full-width">
+                        <input type="text" class="form-control" placeholder="Nome" name="Name" ngModel required>
+                    </div>
+                    <div class="form-group example-full-width">
+                        <input type="text" class="form-control" placeholder="Email" name="Email" ngModel required>
+                    </div>
+                    <div class="form-group example-full-width">
+                        <textarea class="form-control" placeholder="Sua Mensagem" cols="30" rows="6" name="message"
+                            ngModel required></textarea>
+                    </div>
+                    <div class="form-group example-button-row">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>
+        <a class="footer__social-link" href="https://www.instagram.com/vela.soft" target="_blank">
+            Siga-nos no Instagram
+            <fa-icon [icon]="faInstagram"></fa-icon>
+        </a>
+    </p>
+    <p>© 2019 Copyright:<a href="#"> VelaSoft</a></p>
+</div>
