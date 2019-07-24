@@ -54,10 +54,9 @@
     </div>
 </nav>
 
-<div #home class="home" style="background-image: url(assets/computer.png)">
+<div #home class="home">
     <h1>VelaSoft
-        <p>Desenvolvimento sob medida</p>
-    </h1>
+    <p>Desenvolvimento sob medida</p></h1>
 </div>
 
 <div #servicos class="servicos">
@@ -99,39 +98,40 @@
     <br>
     <h1 style="color: #fff;">Portifolio</h1>
 </div>
-
 <div #contato class="contato">
     <br>
-    <h1>Contato</h1>
+    <h1>Entre em contato</h1>
     <div class="container">
         <div class="row">
-        
+            <div class="col">
+                <form (ngSubmit)="contactForm(form.value); form.reset()" #form="ngForm" class="example-form">
+                    <div class="form-group example-full-width">
+                        <!-- <input matInput placeholder="Nome"> -->
+                        <input type="text" class="form-control" placeholder="Nome" name="Name" ngModel required>
+                    </div>
+                    <div class="form-group example-full-width">
+                        <!-- <input matInput placeholder="Email"> -->
+                        <input type="text" class="form-control" placeholder="Email" name="Email" ngModel required>
+                    </div>
+                    <div class="form-group example-full-width">
+                        <!-- <textarea matInput placeholder="Sua Mensagem"></textarea> -->
+                        <textarea class="form-control" placeholder="Sua Mensagem" cols="30" rows="6" name="message" ngModel required></textarea>
+                    </div>
+                    <div class="form-group example-button-row">
+                        <!-- <button mat-raised-button color="primary">Enviar</button> -->
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
             <div class="col" style="text-align: left; margin-top: 15px">
                 <p>
                     <img src="assets/icon_telefone.png" />
-                    (19) 981816213 /
+                    (19) 981816213 / 
                 </p>
                 <p>
                     <img src="assets/icon_email.png" />
                     contatovelasoft@gmail.com
                 </p>
-            </div>
-            <div class="col">
-                <form (ngSubmit)="contactForm(form.value); form.reset()" #form="ngForm" class="example-form">
-                    <div class="form-group example-full-width">
-                        <input type="text" class="form-control" placeholder="Nome" name="Name" ngModel required>
-                    </div>
-                    <div class="form-group example-full-width">
-                        <input type="text" class="form-control" placeholder="Email" name="Email" ngModel required>
-                    </div>
-                    <div class="form-group example-full-width">
-                        <textarea class="form-control" placeholder="Sua Mensagem" cols="30" rows="6" name="message"
-                            ngModel required></textarea>
-                    </div>
-                    <div class="form-group example-button-row">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
@@ -139,8 +139,8 @@
 
 <div class="footer">
     <p>
-        <a class="footer__social-link" href="https://www.instagram.com/vela.soft" target="_blank">
-            Siga-nos no Instagram
+        <a class="footer__social-link"  href="https://www.instagram.com/vela.soft" target="_blank">
+            Siga-nos no Instagram 
             <fa-icon [icon]="faInstagram"></fa-icon>
         </a>
     </p>
